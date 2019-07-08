@@ -46,13 +46,13 @@ def search_results(request):
         return render(request, 'search.html',{"message":message})
 
 
-# @login_required(login_url='/accounts/login/')
-# def neighborhood(request,id):
-#     date = dt.date.today()
-#     post=Neighborhood.objects.get(id=id)
-#     brushs = Post.objects.filter(neighborhood=post)
-#     business = Business.objects.filter(neighborhood=post)
-#     return render(request,'each_hood.html',{"post":post,"date":date,"brushs":brushs, "business":business})
+@login_required(login_url='/accounts/login/')
+def neighborhood(request,id):
+    date = dt.date.today()
+    post=Neighborhood.objects.get(id=id)
+    brushs = Post.objects.filter(neighborhood=post)
+    business = Business.objects.filter(neighborhood=post)
+    return render(request,'each_hood.html',{"post":post,"date":date,"brushs":brushs, "business":business})
 
 def neighborhoods(request):
     neighborhoods = Neighbourhood.objects.all()
