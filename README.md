@@ -1,12 +1,12 @@
 # Neighborhood
 This is an application that allows you to be in the loop about everything happening in your neighborhood. From contact information of different handyman to meetingS, announcements or even alerts.
 
-## App
+<!-- ## App
 ![Screenshot from 2019-06-06 09-42-37](https://user-images.githubusercontent.com/47333363/59012779-0afb3d80-8841-11e9-9309-0555c396fc8e.png)
 
-![Screenshot from 2019-06-06 09-42-49](https://user-images.githubusercontent.com/47333363/59012880-4e55ac00-8841-11e9-8049-47af1ddae491.png)
+![Screenshot from 2019-06-06 09-42-49](https://user-images.githubusercontent.com/47333363/59012880-4e55ac00-8841-11e9-8049-47af1ddae491.png) -->
 
-<!-- ## User stories
+## User stories
 The user should be able to:
 
 Sign in with the application to start using.
@@ -15,7 +15,7 @@ Sign in with the application to start using.
 * Find Contact Information for the health department and Police authorities near my neighborhood.
 * Create Posts that will be visible to everyone in my neighborhood.
 * Change My neighborhood when I decide to move out.
-* Only view details of a single neighborhood. -->
+* Only view details of a single neighborhood.
 
 ## Prerequisites
  Python3.6
