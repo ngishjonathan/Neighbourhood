@@ -37,10 +37,10 @@ def create_user_profile(sender, instance, created, **kwargs):
 # def save_profile(sender, instance, **kwargs):
 #     instance.profile.save()
 
-# Create your models here. 
-class Neighbourhood(models.Model):
-    image = models.ImageField(upload_to='neighimage/', null=True)
-    neighborhood_name = models.CharField(max_length = 70, blank=True, null=True)
+# # Create your models here. 
+# class Neighbourhood(models.Model):
+#     image = models.ImageField(upload_to='neighimage/', null=True)
+#     neighborhood_name = models.CharField(max_length = 70, blank=True, null=True)
 
 
 class Business(models.Model):
