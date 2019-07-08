@@ -32,27 +32,27 @@ def edit_profile(request):
     return render(request, 'edit_profile.html', {"form":signup_form,"profile":profile})
     
 @login_required(login_url='/accounts/login/')
-# def search_results(request):
-#     if 'business' in request.GET and request.GET["business"]:
-#         search_term = request.GET.get("business")
-#         searched_businesses = Business.objects.filter(name=search_term)
-#         message = f"{search_term}"
-#         profiles=  Profile.objects.all( )
+def search_results(request):
+    if 'business' in request.GET and request.GET["business"]:
+        search_term = request.GET.get("business")
+        searched_businesses = Business.objects.filter(name=search_term)
+        message = f"{search_term}"
+        profiles=  Profile.objects.all( )
       
-#         return render(request, 'search.html',{"message":message,"business": searched_businesses,'profiles':profiles})
+        return render(request, 'search.html',{"message":message,"business": searched_businesses,'profiles':profiles})
 
-#     else:
-#         message = "You haven't searched for any term"
-#         return render(request, 'search.html',{"message":message})
+    else:
+        message = "You haven't searched for any term"
+        return render(request, 'search.html',{"message":message})
 
 
-@login_required(login_url='/accounts/login/')
-def neighborhood(request,id):
-    date = dt.date.today()
-    post=Neighborhood.objects.get(id=id)
-    brushs = Post.objects.filter(neighborhood=post)
-    business = Business.objects.filter(neighborhood=post)
-    return render(request,'each_hood.html',{"post":post,"date":date,"brushs":brushs, "business":business})
+# @login_required(login_url='/accounts/login/')
+# def neighborhood(request,id):
+#     date = dt.date.today()
+#     post=Neighborhood.objects.get(id=id)
+#     brushs = Post.objects.filter(neighborhood=post)
+#     business = Business.objects.filter(neighborhood=post)
+#     return render(request,'each_hood.html',{"post":post,"date":date,"brushs":brushs, "business":business})
 
 def neighborhoods(request):
     neighborhoods = Neighbourhood.objects.all()
