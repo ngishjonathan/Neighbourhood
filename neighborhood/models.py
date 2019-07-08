@@ -43,11 +43,11 @@ class Neighbourhood(models.Model):
     neighborhood_name = models.CharField(max_length = 70, blank=True, null=True)
 
 
-# class Business(models.Model):
-#     name = models.CharField(max_length=30)
-#     phone_number = models.CharField(max_length=10)
-#     image = models.ImageField(upload_to='bsimage/')
-#     neighbourhood = models.ForeignKey(Neighbourhood, related_name='businesses')
+class Business(models.Model):
+    name = models.CharField(max_length=30)
+    phone_number = models.CharField(max_length=10)
+    image = models.ImageField(upload_to='bsimage/')
+    neighbourhood = models.ForeignKey(Neighbourhood, related_name='businesses')
     
     @classmethod
     def search_by_name(cls,search_term):
